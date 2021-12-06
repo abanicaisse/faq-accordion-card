@@ -1,0 +1,160 @@
+:root {
+    --dark-sat-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+    --soft-violet-grad: hsl(273, 75%, 66%);
+    --soft-blue-grad: hsl(240, 73%, 65%);
+    --darker-gray-blue-txt: hsl(237, 12%, 33%);
+    --dark-gray-blue-txt: hsl(240, 6%, 50%);
+    --light-gray-blue-hr: hsl(240, 5%, 91%);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: var(--soft-violet-grad);
+    color: var(--dark-gray-blue-txt);
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.desktop-img {
+    display: none;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+    display: grid;
+    align-items: center;
+}
+
+main article {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+}
+
+.illustration {
+    width: 75%;
+    margin: auto;
+    background: url(/images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: 100%;
+    z-index: 1;
+    padding-bottom: 1.5rem;
+}
+
+/*FAQ Section*/
+.faq {
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 8rem 1rem 2rem 1rem;
+    margin-top: -7rem;
+}
+
+/*Make the Illustration look good on every mobile size*/
+@media screen and (max-width: 340px) {
+    .illustration {
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (min-width: 410px) {
+    .illustration {
+        margin-bottom: -1rem;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .illustration {
+        margin-bottom: -2rem;
+    }
+    .faq {
+        padding: 12rem 1rem 2rem 1rem;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .illustration {
+        margin-bottom: -4rem;
+    }
+}
+
+
+.faq h1 {
+    font-size: 2rem;
+    color: var(--dark-sat-blue);
+    text-align: center;
+    /* margin-bottom: 0rem; */
+}
+
+.faq .accordion {
+    padding: 1rem;
+}
+
+
+
+/* Accordion button  */
+.faq .accordion__btn {
+    margin-left: -1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq .accordion__btn::after {
+    content: url(/images/icon-arrow-down.svg);
+    margin-left: .5rem;
+    /* transition: transform .2s ease-out; */
+}
+
+/* .faq .accordion__btn:hover::after{
+    transform: rotate(-180deg);
+} */
+
+.faq .accordion h3:hover {
+    color: var(--soft-red);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+
+/* Active Accordion button with JS */
+.active-btn {
+    margin-left: -1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq .active-btn::after {
+    content: url(/images/);
+    content: url(/images/icon-arrow-down.svg);
+    /* transform: rotate(180deg);
+    margin-bottom: 1rem; */
+}
+
+
+/* Accordion hidden text  */
+.faq .accordion .accordion__pannel {
+    display: none;
+}
