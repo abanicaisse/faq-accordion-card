@@ -51,6 +51,7 @@ main article {
 }
 
 .illustration {
+    /* position: relative; */
     width: 75%;
     margin: auto;
     background: url(/images/bg-pattern-mobile.svg);
@@ -157,4 +158,91 @@ main article {
 /* Accordion hidden text  */
 .faq .accordion .accordion__pannel {
     display: none;
+    /* margin-left: -1rem; */
+}
+
+.faq .accordion .accordion__pannel p {
+    margin-top: .5rem;
+    margin-left: -1rem;
+}
+
+
+/*Styling the Desktop version*/
+@media screen and (min-width: 1000px) {
+    .mobile-img {
+        display: none;
+    }
+
+    .desktop-img {
+        display: block;
+        margin-left: -5rem;
+        overflow-x: hidden;
+    }
+
+    main {
+        width: min(100%, 90rem);
+    }
+
+    main article {
+        width: min(70%);
+        background-color: white;
+        flex-direction: row;
+        gap: 1rem;
+        border-radius: 1rem;
+        padding: 0rem 2rem;
+    }
+
+    @media screen and (max-width: 1300px) {
+        main article {
+            width: min(80%);
+        }
+    }
+
+    .illustration {
+        width: 75%;
+        margin: auto;
+        /* display: grid;
+        place-items: center; */
+        background: white;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    figure {
+        position: relative;
+        margin: auto;
+        z-index: 0;
+        padding: 2rem 0rem;
+        margin-left: -2rem;
+        overflow: hidden;
+        background: url("/images/bg-pattern-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: 200%;
+        background-position: 100% 60%;
+    }
+
+    .illustration::before {
+        content: url("/images/illustration-box-desktop.svg");
+        position: absolute;
+        top: 35%;
+        left: -10%;
+        z-index: 1;
+    }
+
+    @media screen and (min-width: 1260px) {
+        .illustration::after {
+            left: -30%;
+        }  
+    }
+    
+    /*FAQ Section*/
+    .faq {
+        margin-top: 0;
+        padding-top: 4rem;
+    }
+
+    .faq h1 {
+        text-align: left;
+        margin-bottom: 1rem;
+    }
 }
