@@ -10,8 +10,10 @@ for (let i = 0; i < accordion.length; i++) {
 
         if (accPannel.style.display === "block") {
             accPannel.style.display = "none";
+            accPannel.style.maxHeight = null;
         }else {
             accPannel.style.display = "block";
+            accPannel.style.maxHeight = accPannel.scrollHeight + "px"
         }
     }
 }

@@ -54,7 +54,7 @@ main article {
     /* position: relative; */
     width: 75%;
     margin: auto;
-    background: url(/images/bg-pattern-mobile.svg);
+    background: url(../images/bg-pattern-mobile.svg);
     background-repeat: no-repeat;
     background-position-y: bottom;
     background-size: 100%;
@@ -123,7 +123,7 @@ main article {
 }
 
 .faq .accordion__btn::after {
-    content: url(/images/icon-arrow-down.svg);
+    content: url(../images/icon-arrow-down.svg);
     margin-left: .5rem;
     transition: transform .2s ease-out;
 }
@@ -149,8 +149,7 @@ main article {
 }
 
 .faq .active-btn::after {
-    content: url(/images/);
-    content: url(/images/icon-arrow-down.svg);
+    content: url(../images/icon-arrow-down.svg);
     transform: rotate(180deg);
 }
 
@@ -158,12 +157,15 @@ main article {
 /* Accordion hidden text  */
 .faq .accordion .accordion__pannel {
     display: none;
-    /* margin-left: -1rem; */
+    margin-left: -1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
 }
 
 .faq .accordion .accordion__pannel p {
     margin-top: .5rem;
-    margin-left: -1rem;
+    margin-left: 0rem;
 }
 
 
@@ -215,14 +217,14 @@ main article {
         padding: 2rem 0rem;
         margin-left: -2rem;
         overflow: hidden;
-        background: url("/images/bg-pattern-desktop.svg");
+        background: url("../images/bg-pattern-desktop.svg");
         background-repeat: no-repeat;
         background-size: 200%;
         background-position: 100% 60%;
     }
 
     .illustration::before {
-        content: url("/images/illustration-box-desktop.svg");
+        content: url("../images/illustration-box-desktop.svg");
         position: absolute;
         top: 35%;
         left: -10%;
